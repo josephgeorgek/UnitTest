@@ -1,5 +1,12 @@
+subscription-manager register --username --password --auto-attach
+yum update
+yum groupinstall 'Server with GUI'
+yum groupinstall 'X Window System' 'GNOME'
+systemctl set-default graphical.target
 yum update
 yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel 
+
+
 yum install gcc gcc-c++ make openssl-devel
 yum  groupinstall 'Development Tools'
 yum install gcc openssl-devel bzip2-devel
